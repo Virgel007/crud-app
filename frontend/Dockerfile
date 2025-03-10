@@ -17,7 +17,7 @@ COPY . .
 RUN npm run build
 
 # Экспозиция порта
-EXPOSE 3000
+EXPOSE 5173
 
 # Запуск приложения
-CMD ["npm", "start"]
+CMD ["npm", "run", "start"]

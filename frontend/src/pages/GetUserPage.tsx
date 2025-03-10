@@ -104,7 +104,7 @@ const GetUserPage: React.FC = () => {
 };
 
 // Стили
-const styles = {
+const styles: { [key: string]: React.CSSProperties } = {
     container: {
         textAlign: 'center',
         marginTop: '50px',

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import api from '../api/api';
 
 const CreateUserPage: React.FC = () => {
@@ -10,7 +10,6 @@ const CreateUserPage: React.FC = () => {
     });
     const [error, setError] = useState<string | null>(null);
     const [successMessage, setSuccessMessage] = useState<string | null>(null);
-    const navigate = useNavigate();
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const { name, value } = e.target;
@@ -81,7 +80,7 @@ const CreateUserPage: React.FC = () => {
 };
 
 // Стили
-const styles = {
+const styles: { [key: string]: React.CSSProperties } = {
     container: {
         textAlign: 'center',
         marginTop: '50px',

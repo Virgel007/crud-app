@@ -13,13 +13,17 @@ const PORT = process.env.PORT || 5000;
 app.use(express.json());
 
 // Middleware для обработки CORS
-app.use(
-    cors({
-        origin: 'http://localhost:5173', // Разрешаем только этот источник
-        methods: ['GET', 'POST', 'PUT', 'DELETE'], // Разрешенные методы
-        allowedHeaders: ['Content-Type'], // Разрешенные заголовки
-    })
-);
+app.use(cors({
+    origin: '*', // Разрешаем запросы со всех адресов
+    methods: ['GET', 'POST', 'PUT', 'DELETE'], // Разрешенные методы
+    allowedHeaders: ['Content-Type'], // Разрешенные заголовки
+}));
+
+app.use(cors({
+    origin: ['http://localhost:5173', 'http://172.18.0.4:5173'], // Разрешаем оба адреса
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    allowedHeaders: ['Content-Type'],
+}));
 
 // Подключение к MongoDB
 mongoose.connect(process.env.MONGO_URI || 'mongodb://localhost:27017/crud-app')

@@ -624,3 +624,9 @@
 {"level":"info","message":"2025-03-10T09:37:12.496Z Validator.userValidator: Controller validation succeeded for type UserController: Attribute is valid."}
 {"level":"info","message":"2025-03-10T09:37:12.496Z Validator.isPhoneNumberValid: Controller validation succeeded for type phone: Attribute is valid."}
 {"level":"info","message":"2025-03-10T09:37:12.497Z Validator.phoneValidator: Service validation succeeded for type phoneDB: Attribute is valid."}
+{"level":"info","message":"2025-03-10T11:04:05.667Z Validator.userValidator: Controller validation succeeded for type UserController: Attribute is valid."}
+{"level":"info","message":"2025-03-10T11:04:05.668Z Validator.userValidator: Controller validation succeeded for type UserController: Attribute is valid."}
+{"level":"info","message":"2025-03-10T11:04:05.669Z Validator.isPhoneNumberValid: Controller validation succeeded for type phone: Attribute is valid."}
+{"level":"info","message":"2025-03-10T11:04:05.672Z Validator.phoneValidator: Service validation succeeded for type phoneDB: Attribute is valid."}
+{"level":"info","message":"2025-03-10T11:04:15.695Z Validator.idValidator: Controller validation succeeded for type IdController: Attribute is valid."}
+{"level":"info","message":"2025-03-10T11:04:15.697Z Validator.serviceUserValidator: Service validation succeeded for type UserService: Attribute is valid."}
