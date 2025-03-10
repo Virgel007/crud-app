@@ -1,17 +1,23 @@
-# Используем официальный образ Node.js
-FROM node:18
+# Базовый образ Node.js
+FROM node:18-alpine
 
-# Устанавливаем рабочую директорию
+# Установка рабочей директории
 WORKDIR /app
 
-# Копируем package.json и package-lock.json
+# Копирование package.json и package-lock.json
 COPY package*.json ./
 
-# Устанавливаем зависимости
+# Установка зависимостей
 RUN npm install
 
-# Копируем остальные файлы проекта
+# Копирование исходного кода
 COPY . .
 
-# Команда для запуска приложения в режиме разработки
-CMD ["npm", "run", "dev"]
+# Сборка приложения
+RUN npm run build
+
+# Экспозиция порта
+EXPOSE 3000
+
+# Запуск приложения
+CMD ["npm", "start"]
